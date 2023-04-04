@@ -7,3 +7,27 @@
 body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+/* Utilities */
+.test{
+  background-color: rgba(0, 0, 255, 0.449);
+}
+
+.container{
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container h1{
+  text-align: center;
+  margin: 30px;
+}
+
+.team-card{
+  
+}
+
+.team-card img{
+  width: 100%;
+}
