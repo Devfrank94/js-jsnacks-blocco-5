@@ -68,16 +68,34 @@ console.log(studentiOver)
 
 //Js Snack 2
 
+const containerStudent = document.querySelector(".students")
 
+for ( let i = 0; i < students.length ; i++){
+  const student = students[i];
+  console.log('Singolo studente -->',student);
 
+  const mediaVoti = calculateMedia(student) //Media dei voti
+  console.log(mediaVoti)
+  
+}
 
+const {firstName, lastName, age, matricola, voti} = student;
+const cardStud =`
+<div class="stud-card">
+    <div class="card-image">
+      <img src="img/${i}" alt="">
+    </div>
+    <div class="card-text">
+      <h3>Nome: ${firstName}</h3>
+      <h3>Cognome: ${lastName}</h3>
+      <h4>Età: ${age}</h4>
+      <h4>N° Matricola: ${matricola}</h4>
+      <h4>Media Voti: ${voti}</h4>
+    </div>
+  </div>
+`
 
-
-
-
-
-
-
+students.innerHTML += cardStud;
 
 
 
