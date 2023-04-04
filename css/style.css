@@ -6,6 +6,7 @@
 
 body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #F5F5F1;
 }
 
 /* Utilities */
@@ -14,20 +15,38 @@ body{
 }
 
 .container{
-    width: 80%;
-    max-width: 1400px;
-    margin: 0 auto;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.container h1{
+.students{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.stud-card{
+  width: 300px;
+}
+
+.container h1,p{
   text-align: center;
   margin: 30px;
 }
 
-.team-card{
-  
+.stud-card img{
+  width: 100%;
 }
 
-.team-card img{
-  width: 100%;
+.card-text{
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+  padding: 15px;
+  color: #7F7A75;
 }
