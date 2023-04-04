@@ -86,6 +86,7 @@ for ( let i = 0; i < students.length ; i++){
 
 //Funzione che disegna struttura nell HTML
 
+// Partial Bonus
 const containerStudent = document.querySelector(".students");
 drawStudent();
 
