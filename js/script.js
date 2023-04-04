@@ -10,3 +10,46 @@ Dobbiamo creare un nuovo elenco dove ogni studente ha un nome-cognome, matricola
 
 */
 
+const students = [
+  {
+    firstName : "Francesco",
+    lastName : "Rossi",
+    age : 24
+  },
+  {
+    firstName : "Giuseppe",
+    lastName : "Verdi",
+    age : 56
+  },
+  {
+    firstName : "Carlo",
+    lastName : "De Girolamo",
+    age : 66
+  },
+  {
+    firstName : "Giro",
+    lastName : "La trottola",
+    age : 46
+  },
+  {
+    firstName : "Guido",
+    lastName : "La vespa",
+    age : 26
+  },
+  {
+    firstName : "Luca",
+    lastName : "Bellini",
+    age : 17
+  },
+]
+
+// Js Snack 1
+const utentiMinorenni = students.filter( (student) => student.age < 18 )
+console.log(utentiMinorenni)
+
+const utentiOver = students.filter( (student) => student.age > 65 )
+console.log(utentiOver)
+
+
+//Js Snack 2
+
