@@ -135,12 +135,13 @@ function calculateMedia(studente){
     const votoSingolo = voti;
     
     sommaVoti += votoSingolo;
-  }) ;
+  });
 
   //Per scoprire la media somma dei voti diviso quanti voti assegnati
-  mediaVoti = (sommaVoti / studente.voti.length).toFixed(1);
+  mediaVoti = (sommaVoti / studente.voti.length).toFixed(0);
 
   return mediaVoti
+
 }
 
 
@@ -155,11 +156,10 @@ function getRandomNumbers(max,min){
 function votiRandom(){
 
   const votiStudente = [];
-  for (let i = 0; i < getRandomNumbers(1,7); i++) {
+  for (let i = 0; i < getRandomNumbers(1,10); i++) {
   const voto = getRandomNumbers(1,10)
   votiStudente.push(voto)
   
   }
   return votiStudente;
 }
-
