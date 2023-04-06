@@ -84,3 +84,38 @@ const studOvId120 = studOv70.filter((student) => {
 });
 
 console.log('Studenti con somma voti più alta di 70 e id superiore a 120', studOvId120);
+
+console.log('-------------------------Fine Snack 4--------------------------------');
+
+console.log('-------------------------Inizio Snack 5--------------------------------');
+
+
+/*
+Creare un array di oggetti:
+Ogni oggetto descriverà una bici da corsa con le seguenti proprietà : nome e peso.
+Stampare in console la bici con peso minore utilizzando destructuring e template literal
+*/
+
+const biciDaCorsa = [
+  {
+    nome: 'Fast',
+    peso: 8.5
+  },
+  {
+    nome: 'Fast2',
+    peso: 7.8},
+  {
+    nome: 'Trek', 
+    peso: 9.4
+  },
+  {
+    nome: 'Giant',
+    peso: 8.2
+  },
+  {
+    nome: 'Scott',
+    peso: 7.4
+  }
+];
+
+
