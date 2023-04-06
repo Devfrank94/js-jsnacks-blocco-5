@@ -134,6 +134,7 @@ const container = document.querySelector(".container-fluid");
 container.innerHTML =`
 <div class="card shadow-sm" style="width: 20rem;">
   <div class="card-body">
+  <h3>Snack-5</h3>
   <h3>Bicicletta leggera</h3>
     <h5 class="card-title">Nome: ${nome}</h5>
     <p class="card-text">Peso: ${peso}kg</p>
@@ -142,8 +143,65 @@ container.innerHTML =`
 `
 console.log('-------------------------Fine Snack 5--------------------------------');
 
-console.log('-------------------------Inizio Snack 6--------------------------------');
+console.log('-------------------------Inizio Snack 6------------------------------');
 
 
+/*
+
+*SNACK 6*
+Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà : nome,
+punti fatti, falli subiti.
+Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+Generare numeri random al posto degli 0 nelle proprietà : punti fatti e falli subiti.
+Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e
+falli subiti e stampiamo tutto in console.
+
+*/
+
+const squadre = [
+  {
+    squadra: 'Juve',
+    puntiFatti: 0,
+    falliSubiti: 0,
+  },
+  {
+    squadra: 'Samp',
+    puntiFatti: 0,
+    falliSubiti: 0,
+  },
+  {
+    squadra: 'Roma',
+    puntiFatti: 0,
+    falliSubiti: 0,
+  },
+  {
+    squadra: 'Milan',
+    puntiFatti: 0,
+    falliSubiti: 0,
+  },
+];
+const containerFalli = document.querySelector(".falli");
+
+for (let i = 0; i < squadre.length; i++) {
+  squadre[i].puntiFatti = Math.floor(Math.random() * 10);
+  squadre[i].falliSubiti = Math.floor(Math.random() * 10);
+}
+
+const arrayNomiFalliSubiti = squadre.map(({ squadra, falliSubiti }) => ({squadra, falliSubiti,}));
+
+console.log('Nuovo Array', arrayNomiFalliSubiti);
 
 
+const {squadra, puntiFatti, falliSubiti} = arrayNomiFalliSubiti;
+console.log(falliSubiti)
+
+containerFalli.innerHTML =`
+<div class="card shadow-sm" style="width: 20rem;">
+  <div class="card-body">
+  <h3>Snack-6</h3>
+    <h4 class="card-title">Nome squadra: ${squadra}</h4>
+    <p class="card-text">Falli subiti: ${falliSubiti}</p>
+  </div>
+</div>
+`
+console.log('-------------------------Fine Snack 6--------------------------------');
