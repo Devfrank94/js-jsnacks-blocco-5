@@ -87,7 +87,7 @@ console.log('Studenti con somma voti più alta di 70 e id superiore a 120', stud
 
 console.log('-------------------------Fine Snack 4--------------------------------');
 
-console.log('-------------------------Inizio Snack 5--------------------------------');
+console.log('-------------------------Inizio Snack 5------------------------------');
 
 
 /*
@@ -99,23 +99,51 @@ Stampare in console la bici con peso minore utilizzando destructuring e template
 const biciDaCorsa = [
   {
     nome: 'Fast',
-    peso: 8.5
+    peso: 8.5,
   },
   {
     nome: 'Fast2',
-    peso: 7.8},
+    peso: 7.8,
+  },
   {
     nome: 'Trek', 
-    peso: 9.4
+    peso: 9.4,
   },
   {
     nome: 'Giant',
-    peso: 8.2
+    peso: 8.2,
   },
   {
     nome: 'Scott',
-    peso: 7.4
+    peso: 7.4,
   }
 ];
+
+let minPeso = biciDaCorsa.reduce((min, current) => {
+  return current.peso < min.peso ? current : min
+  
+});
+console.log(minPeso);
+
+
+let {nome, peso} = minPeso;
+console.log(`La bici più leggera è ${nome} con un peso di ${peso} kg`);
+
+const container = document.querySelector(".container-fluid");
+
+container.innerHTML =`
+<div class="card shadow-sm" style="width: 20rem;">
+  <div class="card-body">
+  <h3>Bicicletta leggera</h3>
+    <h5 class="card-title">Nome: ${nome}</h5>
+    <p class="card-text">Peso: ${peso}kg</p>
+  </div>
+</div>
+`
+console.log('-------------------------Fine Snack 5--------------------------------');
+
+console.log('-------------------------Inizio Snack 6--------------------------------');
+
+
 
 
